@@ -38,6 +38,8 @@ void main()
 }
 ```
 
+![Example Shader](https://raw.githubusercontent.com/JRCocos/SimpleShader/master/example.png)
+
 SimpleShader automatically injects these uniforms into your shaders
 ```glsl
 //the texture of the sprite the shader is applied to 
@@ -52,8 +54,6 @@ cc_FragColor
 //the current time in seconds 
 cc_Time
 ```
-
-![Example Shader](https://raw.githubusercontent.com/JRCocos/SimpleShader/master/example.png)
 
 # Time Based Effects
 by default SimpleShader adds a ```cc_Time``` uniform to all fragment shaders for easily creating time based effects,
