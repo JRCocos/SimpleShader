@@ -38,6 +38,8 @@ void main()
 }
 ```
 
+![Example Shader](https://raw.githubusercontent.com/JRCocos/SimpleShader/master/example.png)
+
 # Time Based Effects
 by default SimpleShader adds a ```cc_Time``` uniform to all fragment shaders for easily creating time based effects,
 to update the time uniform for all shaders simply call the ```updateShaderTime``` method on the SimpleShaderManager object in your scenes update method
