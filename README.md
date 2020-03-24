@@ -29,13 +29,28 @@ uniform float opacity;
 void main()
 {
     //u_texture is the sprites original texture
-    vec4 spritesTexture = texture2D(u_texture, cc_TexCoord);
+    vec4 spritesTexture = texture2D(u_texture, cc_FragTexCoord1);
 
     //the texture we passed as a uniform
-    vec4 tex = texture2D(someTexture, cc_TexCoord);
+    vec4 tex = texture2D(someTexture, cc_FragTexCoord1);
 
     gl_FragColor = mix(spritesTexture, tex, opacity);
 }
+```
+
+SimpleShader automatically injects these uniforms into your shaders
+```glsl
+//the texture of the sprite the shader is applied to 
+u_texture
+
+//the texture coordinates
+cc_FragTexCoord1
+
+//the color of the sprite the shader is applied to
+cc_FragColor
+
+//the current time in seconds 
+cc_Time
 ```
 
 ![Example Shader](https://raw.githubusercontent.com/JRCocos/SimpleShader/master/example.png)
